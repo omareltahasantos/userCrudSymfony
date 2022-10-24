@@ -1,0 +1,78 @@
+.header{
+  font-size: 15px;
+  padding: 20px;
+}
+
+#paginate{
+  display: inline;
+}
+
+tr > td{
+  font-size: 15px;
+  text-align: center;
+}
+
+#create{
+  font-size: 20px;
+}
+#page{
+  padding-right: 10px;
+  list-style: none;
+  color: 'blue'
+}
+
+#create:link, #create:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#create:hover, #create:active {
+  background-color: red;
+}
+
+#show:link, #show:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#show:hover, #show:active {
+  background-color: red;
+}
+
+
+
+#edit:link, #edit:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#edit:hover, #edit:active {
+  background-color: red;
+}
+
+#page:link, #page:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+#page:hover, #page:active {
+  background-color: red;
+}
+
+

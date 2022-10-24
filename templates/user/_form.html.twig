@@ -1,0 +1,26 @@
+{{ form_start(form) }}
+    <div class="form-group">
+        <label for="name" class='m-0'>{{form_label(form.name, 'Nombre')}}</label>
+        <div>
+            {{form_widget(form.name)}}
+        </div>
+        <label for="last_name" class='m-0'>{{form_label(form.last_name, 'Apellidos')}}</label>
+        <div>
+            {{form_widget(form.last_name)}}
+        </div>
+         <label for="age" class='m-0'>{{form_label(form.age, 'Edad')}}</label>
+        <div>
+            {{form_widget(form.age)}}
+        </div>
+         <label for="email" class='m-0'>{{form_label(form.email, 'Email')}}</label>
+        <div>
+            {{form_widget(form.email)}}
+        </div>
+         <label for="phone" class='m-0'>{{form_label(form.phone, 'Teléfono')}}</label>
+        <div>
+            {{form_widget(form.phone)}}
+        </div>
+    </div>
+    
+    <button class="btn btn-primary">{{ button_label|default('Guardar') }}</button>
+{{ form_end(form) }}

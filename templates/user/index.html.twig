@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User index{% endblock %}
+
+{% block body %}
+  <div class='container'>
+    <h1>Crud user</h1>
+    <a id='create' href="{{ path('app_user_new', {'currentPage': thisPage}) }}">Crear usuario</a>
+        <table class="table table mt-3" >
+            <thead class='thead-dark'>
+                <tr>
+                    <th class='header'>Id</th>
+                    <th class='header'>Nombre</th>
+                    <th class='header'>Apellidos</th>
+                    <th class='header'>Edad</th>
+                    <th class='header'>Email</th>
+                    <th class='header'>Teléfono</th>
+                    <th class='header'>Acciones</th>
+                </tr>
+            </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td class='id'>{{ user.id }}</td>
+                <td class='name'>{{ user.name }}</td>
+                <td class='lastname'>{{ user.lastName }}</td>
+                <td class='age'>{{ user.age }}</td>
+                <td class='email'>{{ user.email }}</td>
+                <td class='phone'>{{ user.phone }}</td>
+                <td>
+                 <a id='show' href="{{ path('app_user_show', {'id': user.id, 'currentPage': thisPage}) }}">Mostrar</a>
+                 <a id='edit' href="{{ path('app_user_edit', {'id': user.id, 'currentPage': thisPage}) }}">Editar</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">Ningún registro encontrado</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    
+    {% if maxPages > 1 %}
+    <ul>
+      {%for i in 1..maxPages%}
+            {%if thisPage != i %}
+                <li id='paginate'>
+                    <a id='page' href="{{ path('app_user_index', {currentPage: i}) }}">
+                    {{i}}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+{% endblock %}
